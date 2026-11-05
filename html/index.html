@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой блог</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Хедер */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            margin: 0 0 15px 0;
+        }
+
+        /* Навигация */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Выпадающее меню */
+        .menu {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .menu-button {
+            background-color: #333;
+            color: white;
+            padding: 12px 25px;
+        }
+
+        .menu-list {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
+            border: 1px solid #ccc;
+        }
+
+        .menu-list a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu-list a:hover {
+            background-color: #ddd;
+        }
+
+        .menu:hover .menu-list {
+            display: block;
+        }
+
+        /* Картинка */
+        #image {
+            width: 300px;
+            transition: width 0.5s;
+        }
+
+        /* Ссылки управления картинкой */
+        .image-links a {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Хедер -->
+<header>
+
+    <h1>Мой блог</h1>
+
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">Статьи</a>
+        <a href="#">О блоге</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+</header>
+
+
+<!-- Выпадающее меню -->
+<div class="menu">
+
+    <div class="menu-button">
+        Меню
+    </div>
+
+    <div class="menu-list">
+        <a href="#">Главная</a>
+        <a href="#">Картина</a>
+    </div>
+
+</div>
+
+<br>
+
+
+<!-- Картинка -->
+<img id="image" src="image.jpg" alt="Моя картинка">
+
+<br><br>
+
+
+<!-- Увеличение и уменьшение картинки -->
+<div class="image-links">
+
+    <a href="#" onclick="increaseImage()">Увеличить</a>
+
+    <a href="#" onclick="decreaseImage()">Уменьшить</a>
+
+</div>
+
+
+<script>
+
+    function increaseImage() {
+        document.getElementById("image").style.width = "500px";
+    }
+
+    function decreaseImage() {
+        document.getElementById("image").style.width = "300px";
+    }
+
+</script>
+
+</body>
+</html>

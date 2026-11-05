@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Выход" %}{% endblock %}
+
+{% block content %}
+    <div class="alert alert-success">
+        <h4 class="alert-heading">{% trans "Вы вышли" %}</h4>
+        <p class="mb-0">
+            <a href="{% url 'login' %}" class="alert-link">{% trans "Войти снова" %}</a> {% trans "или" %}
+            <a href="{% url 'game_list' %}" class="alert-link">{% trans "на главную" %}</a>.
+        </p>
+    </div>
+{% endblock %}

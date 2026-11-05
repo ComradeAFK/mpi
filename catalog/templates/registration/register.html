@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Регистрация" %}{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center my-5">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-header bg-primary text-white text-center py-3 rounded-top-4">
+                    <h3 class="mb-0 fw-bold">{% trans "Регистрация" %}</h3>
+                </div>
+                <div class="card-body p-4 p-md-5">
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <!-- Вывод общих ошибок формы (если есть) -->
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger p-2 small">
+                                {{ form.non_field_errors }}
+                            </div>
+                        {% endif %}
+
+                        {% for field in form %}
+                            <div class="mb-4">
+                                <label for="{{ field.id_for_label }}" class="form-label fw-bold text-secondary">
+                                    {{ field.label }}
+                                </label>
+
+                                <!-- Само поле ввода -->
+                                <input type="{{ field.field.widget.input_type }}"
+                                       name="{{ field.html_name }}"
+                                       id="{{ field.id_for_label }}"
+                                       class="form-control form-control-lg {% if field.errors %}is-invalid{% endif %}"
+                                       {% if field.value %}value="{{ field.value }}"{% endif %}
+                                       {% if field.field.required %}required{% endif %}>
+
+                                <!-- Ошибки конкретного поля -->
+                                {% if field.errors %}
+                                    <div class="invalid-feedback fw-bold">
+                                        {{ field.errors|striptags }}
+                                    </div>
+                                {% endif %}
+
+                                <!-- Подсказки (например, про пароль) -->
+                                {% if field.help_text %}
+                                    <div class="form-text text-muted mt-2 small" style="font-size: 0.8rem;">
+                                        {{ field.help_text|safe }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill fw-bold mt-2 shadow-sm">
+                            {% trans "Зарегистрироваться" %}
+                        </button>
+                    </form>
+
+                    <hr class="my-4 text-muted">
+                    <p class="text-center mb-0 text-muted">
+                        {% trans "Уже есть аккаунт?" %}
+                        <a href="{% url 'login' %}" class="text-decoration-none fw-bold">{% trans "Войти" %}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

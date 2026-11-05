@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "О проекте" %}{% endblock %}
+
+{% block content %}
+<!-- Обертка с текстурой пергамента/дерева -->
+<div class="catan-bg py-5 rounded-4 mb-5 shadow-lg position-relative overflow-hidden">
+
+    <div class="container position-relative z-index-1 text-center">
+        <!-- Заголовок -->
+        <div class="mb-5">
+            <div class="display-1 mb-3 sun-pulse">☀️</div>
+            <h1 class="display-3 fw-bold mb-3 catan-title">
+                BoardGamesHub
+            </h1>
+           <p class="lead text-dark opacity-75 mx-auto fw-semibold" style="max-width: 700px;">
+    {% trans "BoardGamesHub - это проект, созданный для того, чтобы помочь находить, обсуждать и делиться впечатлениями о настольных играх." %}
+</p>
+        </div>
+
+        <!-- Сетка фич (Карточки ресурсов) -->
+        <div class="row g-4 mb-5 text-center justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="resource-card h-100 p-4">
+                    <div class="fs-1 mb-2 text-warning">📚</div>
+                    <h5 class="fw-bold text-dark border-bottom border-dark border-opacity-25 pb-2">{% trans "Каталог" %}</h5>
+                    <p class="small text-secondary mb-0">{% trans "Удобный список всех игр с обложками и характеристиками." %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="resource-card h-100 p-4">
+                    <div class="fs-1 mb-2 text-danger">✍️</div>
+                    <h5 class="fw-bold text-dark border-bottom border-dark border-opacity-25 pb-2">{% trans "Обзоры" %}</h5>
+                    <p class="small text-secondary mb-0">{% trans "Пользователи пишут обзоры и ставят оценки играм." %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="resource-card h-100 p-4">
+                    <div class="fs-1 mb-2 text-success">💬</div>
+                    <h5 class="fw-bold text-dark border-bottom border-dark border-opacity-25 pb-2">{% trans "Комментарии" %}</h5>
+                    <p class="small text-secondary mb-0">{% trans "Обсуждайте игры и обзоры с другими участниками." %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="resource-card h-100 p-4">
+                    <div class="fs-1 mb-2 text-primary">🌍</div>
+                    <h5 class="fw-bold text-dark border-bottom border-dark border-opacity-25 pb-2">{% trans "Локализация" %}</h5>
+                    <p class="small text-secondary mb-0">{% trans "Сайт доступен на трех языках." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Технологии (Стилизовано под бочонки/жетоны) -->
+        <div class="card shadow border-0 rounded-4 p-4 p-md-5 mx-auto" style="max-width: 800px; background-color: rgba(255,255,255,0.7); backdrop-filter: blur(5px);">
+            <h3 class="fw-bold mb-4 text-dark text-center font-serif">{% trans "Технологии проекта" %}</h3>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="badge bg-dark rounded-pill px-4 py-3 fs-6 shadow-sm">Python 3</span>
+                <span class="badge bg-success rounded-pill px-4 py-3 fs-6 shadow-sm">Django 6.1</span>
+                <span class="badge bg-secondary rounded-pill px-4 py-3 fs-6 shadow-sm">SQLite</span>
+                <span class="badge bg-primary rounded-pill px-4 py-3 fs-6 shadow-sm">Bootstrap 5</span>
+                <span class="badge text-dark border border-dark rounded-pill px-4 py-3 fs-6 shadow-sm" style="background-color: #e6d5b8;">i18n (3 языка)</span>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="{% url 'game_list' %}" class="btn btn-warning btn-lg rounded-pill px-5 shadow-lg py-3 fw-bold text-dark border border-dark border-2 custom-btn">
+                {% trans "Перейти в каталог" %} →
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Тёплый фон с текстурой (имитация пергамента или заката) */
+    .catan-bg {
+        background-color: #f4ecd8; /* Цвет пергамента */
+        background-image:
+            radial-gradient(circle at 50% 0%, #ffd89b 0%, transparent 50%), /* Имитация заката сверху */
+            linear-gradient(to bottom, #f4ecd8, #e2d4b7);
+        border: 4px solid #d4c4a8;
+    }
+
+    /* Заголовок в стиле фэнтези/старины */
+    .catan-title {
+        color: #3e2723;
+        font-family: 'Georgia', serif;
+        text-shadow: 2px 2px 0px #d4c4a8, 4px 4px 0px rgba(0,0,0,0.1);
+        letter-spacing: 2px;
+    }
+
+    /* Карточки ресурсов (имитация карт из игры) */
+    .resource-card {
+        background-color: #fff9ed;
+        border: 2px solid #c4b59c;
+        border-radius: 12px;
+        box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease;
+    }
+
+    .resource-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 5px 8px 0px rgba(0, 0, 0, 0.15);
+        border-color: #a3906c;
+    }
+
+    /* Анимация солнца (как на обложке) */
+    .sun-pulse {
+        animation: glow 3s ease-in-out infinite;
+        display: inline-block;
+    }
+
+    @keyframes glow {
+        0% { transform: scale(1); filter: drop-shadow(0 0 10px #ffb347); }
+        50% { transform: scale(1.1); filter: drop-shadow(0 0 30px #ffcc33); }
+        100% { transform: scale(1); filter: drop-shadow(0 0 10px #ffb347); }
+    }
+
+    /* Кнопка в стиле деревянных указателей */
+    .custom-btn {
+        background-color: #e6b960;
+        border-color: #8b5a2b !important;
+        transition: all 0.2s;
+    }
+    .custom-btn:hover {
+        background-color: #f4c977;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(230, 185, 96, 0.8) !important;
+    }
+</style>
+{% endblock %}

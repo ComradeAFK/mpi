@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ game.title }}{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'game_list' %}" class="text-decoration-none">{% trans "Каталог" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ game.title }}</li>
+        </ol>
+    </nav>
+
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="sticky-top" style="top: 20px;">
+                {% if game.cover %}
+                    <img src="{{ game.cover.url }}" class="img-fluid rounded-4 shadow-sm" alt="{{ game.title }}">
+                {% else %}
+                    <div class="bg-secondary bg-opacity-25 text-secondary d-flex align-items-center justify-content-center rounded-4 shadow-sm" style="height: 300px;">
+                        <span class="fs-5">{% trans "Нет обложки" %}</span>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1 class="mb-3 fw-bold">{{ game.title }}</h1>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                {% for genre in game.genres.all %}
+                    <span class="badge rounded-pill bg-primary bg-opacity-75 px-3 py-2">{{ genre.name }}</span>
+                {% endfor %}
+            </div>
+
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <div class="row g-3 text-center">
+                        {% if game.year %}
+                        <div class="col-6 col-sm-3 border-end">
+                            <small class="text-muted d-block">{% trans "Год" %}</small>
+                            <span class="fw-bold fs-5">{{ game.year }}</span>
+                        </div>
+                        {% endif %}
+                        <div class="col-6 col-sm-3 border-end">
+                            <small class="text-muted d-block">{% trans "Игроки" %}</small>
+                            <span class="fw-bold fs-5">{{ game.min_players }}–{{ game.max_players }}</span>
+                        </div>
+                        <div class="col-6 col-sm-3 border-end">
+                            <small class="text-muted d-block">{% trans "Время" %}</small>
+                            <span class="fw-bold fs-5">{{ game.play_time }} {% trans "мин" %}</span>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <small class="text-muted d-block">{% trans "Сложность" %}</small>
+                            <span class="fw-bold fs-5">{{ game.get_difficulty_display }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if game.publisher %}
+                <p class="text-muted"><strong>{% trans "Издатель" %}:</strong> {{ game.publisher }}</p>
+            {% endif %}
+
+            <h4 class="mt-4 mb-3">{% trans "Описание" %}</h4>
+            <p class="lead fs-6" style="line-height: 1.8;">{{ game.description }}</p>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Блок Обзоров с кнопкой добавления -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0 fw-bold">{% trans "Обзоры" %}</h3>
+        {% if user.is_authenticated %}
+            <a href="{% url 'review_add' game.slug %}" class="btn btn-success rounded-pill px-4 shadow-sm fw-bold">
+                ✍️ {% trans "Написать обзор" %}
+            </a>
+        {% else %}
+            <a href="{% url 'login' %}?next={% url 'review_add' game.slug %}" class="btn btn-outline-success rounded-pill px-4">
+                {% trans "Войдите, чтобы написать обзор" %}
+            </a>
+        {% endif %}
+    </div>
+
+    {% if game.reviews.all %}
+        <div class="list-group list-group-flush shadow-sm rounded-3 mb-5">
+            {% for review in game.reviews.all %}
+                {% if review.is_published %}
+                    <a href="{% url 'review_detail' review.pk %}" class="list-group-item list-group-item-action p-4 border-0 border-bottom">
+                        <div class="d-flex w-100 justify-content-between align-items-center mb-2">
+                            <h5 class="mb-0 text-primary fw-bold">{{ review.title }}</h5>
+                            <span class="badge bg-warning text-dark fs-6 rounded-pill">{{ review.rating }}/5 ★</span>
+                        </div>
+                        <p class="mb-2 text-secondary">{{ review.text|truncatewords:20 }}</p>
+                        <small class="text-muted"><i class="bi bi-person"></i> {{ review.author.username }} · {{ review.created_at|date:"d.m.Y" }}</small>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-light border shadow-sm mb-5">{% trans "Обзоров пока нет. Станьте первым, кто напишет обзор!" %}</div>
+    {% endif %}
+
+    <h3 class="mb-4 fw-bold">{% trans "Обсуждение игры" %}</h3>
+
+    <div class="row">
+        <div class="col-lg-8">
+            {% if game_comments %}
+                <div class="mb-5">
+                    {% for comment in game_comments %}
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 45px; height: 45px;">
+                                    {{ comment.author.username|first|upper }}
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h6 class="mb-0 fw-bold">{{ comment.author.username }}</h6>
+                                    <small class="text-muted">{{ comment.created_at|date:"d.m.Y H:i" }}</small>
+                                </div>
+                                <p class="mb-0 text-secondary">{{ comment.text|linebreaksbr }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-muted mb-4">{% trans "Пока нет комментариев к игре. Будь первым!" %}</p>
+            {% endif %}
+
+            <div class="card shadow-sm border-0 mb-5">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold mb-3">{% trans "Оставить комментарий" %}</h5>
+                    {% if user.is_authenticated %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                {{ game_form.text }}
+                                {% if game_form.text.errors %}
+                                    <div class="text-danger small mt-1">{{ game_form.text.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <button type="submit" class="btn btn-primary px-4">{% trans "Отправить" %}</button>
+                        </form>
+                    {% else %}
+                        <p class="mb-0 text-muted">
+                            <a href="{% url 'login' %}?next={{ request.path }}" class="btn btn-outline-primary btn-sm">{% trans "Войдите" %}</a>, {% trans "чтобы оставить комментарий." %}
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'game_list' %}" class="btn btn-outline-secondary mt-3">← {% trans "Назад к каталогу" %}</a>
+{% endblock %}

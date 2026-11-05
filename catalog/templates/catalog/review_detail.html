@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ review.title }}{% endblock %}
+
+{% block content %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'game_list' %}" class="text-decoration-none">{% trans "Каталог" %}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'game_detail' review.game.slug %}" class="text-decoration-none">{{ review.game.title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% trans "Обзор" %}</li>
+        </ol>
+    </nav>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div class="card shadow-sm border-0 mb-5 rounded-4">
+                <div class="card-body p-4 p-md-5">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h1 class="fw-bold mb-0">{{ review.title }}</h1>
+                        <span class="badge bg-warning text-dark fs-5 rounded-pill px-3 py-2 ms-3">{{ review.rating }}/5 ★</span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-muted mb-4 pb-3 border-bottom">
+                        <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-2 fw-bold" style="width: 40px; height: 40px;">
+                            {{ review.author.username|first|upper }}
+                        </div>
+                        <div>
+                            <span class="fw-bold text-dark d-block">{{ review.author.username }}</span>
+                            <small>{{ review.created_at|date:"d.m.Y H:i" }}</small>
+                        </div>
+                    </div>
+
+                    <div class="fs-5 text-secondary" style="line-height: 1.8;">
+                        {{ review.text|linebreaks }}
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mb-4 fw-bold">{% trans "Комментарии" %} <span class="badge bg-secondary rounded-pill fs-6">{{ comments.count }}</span></h3>
+
+            {% if comments %}
+                <div class="mb-5">
+                    {% for comment in comments %}
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 45px; height: 45px;">
+                                    {{ comment.author.username|first|upper }}
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <h6 class="mb-0 fw-bold">{{ comment.author.username }} <small class="text-muted fw-normal ms-1">{{ comment.subject }}</small></h6>
+                                    <small class="text-muted">{{ comment.created_at|date:"d.m.Y H:i" }}</small>
+                                </div>
+                                <p class="mb-2 text-secondary">{{ comment.text|linebreaksbr }}</p>
+
+                                {% if user.is_authenticated %}
+                                    {% if user == comment.author or user.is_staff %}
+                                        <form method="post" action="{% url 'comment_toggle' comment.pk %}" class="d-inline">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-sm btn-outline-danger py-0 px-2" style="font-size: 0.75rem;">
+                                                {% trans "Снять с публикации" %}
+                                            </button>
+                                        </form>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="alert alert-light border shadow-sm mb-5">{% trans "Пока нет опубликованных комментариев. Будьте первым!" %}</div>
+            {% endif %}
+
+            <div class="card shadow-sm border-0 mb-5">
+                <div class="card-body p-4">
+                    <h5 class="card-title fw-bold mb-3">{% trans "Оставить комментарий" %}</h5>
+                    {% if user.is_authenticated %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted small fw-bold">{% trans "Тема" %}</label>
+                                    {{ form.subject }}
+                                    {% if form.subject.errors %}
+                                        <div class="text-danger small mt-1">{{ form.subject.errors }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-muted small fw-bold">{% trans "Сообщение" %}</label>
+                                {{ form.text }}
+                                {% if form.text.errors %}
+                                    <div class="text-danger small mt-1">{{ form.text.errors }}</div>
+                                {% endif %}
+                            </div>
+                            <button type="submit" class="btn btn-primary px-4">{% trans "Отправить" %}</button>
+                            <small class="text-muted ms-3">{% trans "Комментарий появится после модерации." %}</small>
+                        </form>
+                    {% else %}
+                        <p class="mb-0 text-muted">
+                            <a href="{% url 'login' %}?next={{ request.path }}" class="btn btn-outline-primary btn-sm">{% trans "Войдите" %}</a>, {% trans "чтобы оставить комментарий." %}
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <a href="{% url 'game_detail' review.game.slug %}" class="btn btn-outline-secondary">← {% trans "Вернуться к игре" %}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

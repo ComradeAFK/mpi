@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+    <div style="max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; border-top: 5px solid #198754;">
+        <h2 style="color: #198754;">Новый комментарий к игре</h2>
+        <p>Игра: <strong>{{ title }}</strong></p>
+        <p>Автор: <strong>{{ author }}</strong></p>
+        <hr style="border: 1px solid #eee;">
+        <p><strong>Текст:</strong></p>
+        <blockquote style="border-left: 4px solid #ccc; padding-left: 10px; color: #555; background: #f9f9f9; padding: 10px;">
+            {{ text }}
+        </blockquote>
+        <hr style="border: 1px solid #eee;">
+        <a href="{{ link }}" style="display: inline-block; padding: 10px 20px; background: #0d6efd; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Посмотреть на сайте
+        </a>
+    </div>
+</body>
+</html>

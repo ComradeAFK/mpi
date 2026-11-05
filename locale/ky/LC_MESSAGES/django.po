@@ -1,0 +1,329 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 15:00+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: catalog/forms.py
+msgid "Текст комментария"
+msgstr "Комментарийдин тексти"
+
+#: catalog/forms.py
+msgid "Ваш вопрос или комментарий к игре..."
+msgstr "Оюн боюнча сурооңуз же комментарийиңиз..."
+
+#: catalog/forms.py
+msgid "Тема"
+msgstr "Тема"
+
+#: catalog/forms.py
+msgid "Сообщение"
+msgstr "Билдирүү"
+
+#: catalog/forms.py
+msgid "Тема комментария"
+msgstr "Комментарийдин темасы"
+
+#: catalog/forms.py
+msgid "Текст не может быть пустым."
+msgstr "Текст бош болбошу керек."
+
+#: catalog/forms.py
+msgid "Текст не должен превышать 1000 символов."
+msgstr "Текст 1000 белгиден ашпоосу керек."
+
+#: catalog/forms.py
+msgid "Тема не может быть пустой."
+msgstr "Тема бош болбошу керек."
+
+#: catalog/forms.py
+msgid "Тема не должна превышать 150 символов."
+msgstr "Тема 150 белгиден ашпоосу керек."
+
+#: catalog/forms.py
+msgid "Текст комментария не может быть пустым."
+msgstr "Комментарийдин тексти бош болбошу керек."
+
+#: catalog/forms.py
+msgid "Пользователь с таким именем уже существует."
+msgstr "Мындай аттагы колдонуучу мурунтан эле бар."
+
+#: catalog/forms.py
+msgid "Email"
+msgstr "Email"
+
+#: catalog/forms.py
+msgid "Обзор должен содержать хотя бы 50 символов."
+msgstr "Сын-пикир жок дегенде 50 белгиден турушу керек."
+
+#: catalog/templates/about.html
+msgid "О проекте"
+msgstr "Долбоор жөнүндө"
+
+#: catalog/templates/about.html
+msgid "BoardGamesHub - это проект, созданный для того, чтобы помочь находить, обсуждать и делиться впечатлениями о настольных играх."
+msgstr "BoardGamesHub - бул үстөл оюндарын табууга, талкуулоого жана алар жөнүндө пикирлерин бөлүшүүгө жардам берүү үчүн түзүлгөн долбоор."
+
+#: catalog/templates/about.html
+msgid "Каталог"
+msgstr "Каталог"
+
+#: catalog/templates/about.html
+msgid "Удобный список всех игр с обложками и характеристиками."
+msgstr "Бардык оюндардын тизмеси мукамбалары жана мүнөздөмөлөрү менен."
+
+#: catalog/templates/about.html
+msgid "Обзоры"
+msgstr "Сын-пикирлер"
+
+#: catalog/templates/about.html
+msgid "Пользователи пишут обзоры и ставят оценки играм."
+msgstr "Колдонуучулар сын-пикир жазып, оюндарга баа коюшат."
+
+#: catalog/templates/about.html
+msgid "Комментарии"
+msgstr "Комментарийлер"
+
+#: catalog/templates/about.html
+msgid "Обсуждайте игры и обзоры с другими участниками."
+msgstr "Башка катышуучулар менен оюндарды жана сын-пикирлерди талкуулаңыз."
+
+#: catalog/templates/about.html
+msgid "Локализация"
+msgstr "Локалдаштыруу"
+
+#: catalog/templates/about.html
+msgid "Сайт доступен на трех языках."
+msgstr "Сайт үч тилде жеткиликтүү."
+
+#: catalog/templates/about.html
+msgid "Технологии проекта"
+msgstr "Долбоордун технологиялары"
+
+#: catalog/templates/about.html
+msgid "Перейти в каталог"
+msgstr "Каталогго өтүү"
+
+#: catalog/templates/base.html
+msgid "Меню"
+msgstr "Меню"
+
+#: catalog/templates/base.html
+msgid "Каталог игр"
+msgstr "Оюндар каталогу"
+
+#: catalog/templates/base.html
+msgid "Админка"
+msgstr "Админка"
+
+#: catalog/templates/base.html
+msgid "Привет"
+msgstr "Салам"
+
+#: catalog/templates/base.html
+msgid "Выйти"
+msgstr "Чыгуу"
+
+#: catalog/templates/base.html
+msgid "Войти"
+msgstr "Кирүү"
+
+#: catalog/templates/base.html
+msgid "Регистрация"
+msgstr "Каттоо"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Каталог настольных игр"
+msgstr "Үстөл оюндарынын каталогу"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Нет обложки"
+msgstr "Мукамбасы жок"
+
+#: catalog/templates/catalog/game_list.html
+msgid "игроков"
+msgstr "оюнчу"
+
+#: catalog/templates/catalog/game_list.html
+msgid "мин"
+msgstr "мүн"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Подробнее"
+msgstr "Толугурак"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Пока нет ни одной игры. Добавь их через"
+msgstr "Азырынча оюн жок. Аларды кошуңуз"
+
+#: catalog/templates/catalog/game_list.html
+msgid "админку"
+msgstr "админка аркылуу"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Страница"
+msgstr "Барак"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Назад"
+msgstr "Артка"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Вперёд"
+msgstr "Алдыга"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Год"
+msgstr "Жылы"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Игроки"
+msgstr "Оюнчулар"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Время"
+msgstr "Убакыт"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Сложность"
+msgstr "Татаалдыгы"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Издатель"
+msgstr "Бастырмачы"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Описание"
+msgstr "Сүрөттөмө"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Обзоров пока нет. Станьте первым, кто напишет обзор!"
+msgstr "Азырынча сын-пикир жок. Биринчи болуп жазыңыз!"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Написать обзор"
+msgstr "Сын-пикир жазуу"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Войдите, чтобы написать обзор"
+msgstr "Сын-пикир жазуу үчүн кириңиз"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Обсуждение игры"
+msgstr "Оюнду талкуулоо"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Пока нет комментариев к игре. Будь первым!"
+msgstr "Азырынча комментарийлер жок. Биринчи болуңуз!"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Оставить комментарий"
+msgstr "Комментарий калтыруу"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Отправить"
+msgstr "Жөнөтүү"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Войдите"
+msgstr "Кириңиз"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "чтобы оставить комментарий."
+msgstr "комментарий калтыруу үчүн."
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Назад к каталогу"
+msgstr "Каталогго кайтуу"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Обзор"
+msgstr "Сын-пикир"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Снять с публикации"
+msgstr "Жарыялоодон алуу"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Пока нет опубликованных комментариев. Будьте первым!"
+msgstr "Азырынча жарыяланган комментарийлер жок. Биринчи болуңуз!"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Комментарий появится после модерации."
+msgstr "Комментарий модерациядан кийин пайда болот."
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Вернуться к игре"
+msgstr "Оюнга кайтуу"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Новый обзор"
+msgstr "Жаңы сын-пикир"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Написать обзор на"
+msgstr "Сын-пикир жазуу:"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Отмена"
+msgstr "Жокко чыгаруу"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Отправить обзор"
+msgstr "Сын-пикирди жөнөтүү"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Обзор появится на сайте только после проверки модератором."
+msgstr "Сын-пикир модератор текшергенден кийин гана сайтта пайда болот."
+
+#: catalog/templates/registration/login.html
+msgid "Вход"
+msgstr "Кирүү"
+
+#: catalog/templates/registration/login.html
+msgid "Неверное имя пользователя или пароль."
+msgstr "Колдонуучунун аты же сырсөз туура эмес."
+
+#: catalog/templates/registration/login.html
+msgid "Нет аккаунта?"
+msgstr "Аккаунтуңуз жокпу?"
+
+#: catalog/templates/registration/login.html
+msgid "Зарегистрироваться"
+msgstr "Каттоо"
+
+#: catalog/templates/registration/login.html
+msgid "На главную"
+msgstr "Башкы бетке"
+
+#: catalog/templates/registration/register.html
+msgid "Уже есть аккаунт?"
+msgstr "Аккаунтуңуз барбы?"
+
+#: catalog/templates/registration/logged_out.html
+msgid "Выход"
+msgstr "Чыгуу"
+
+#: catalog/templates/registration/logged_out.html
+msgid "Вы вышли"
+msgstr "Сиз чыктыңыз"
+
+#: catalog/templates/registration/logged_out.html
+msgid "Войти снова"
+msgstr "Кайра кирүү"
+
+#: catalog/templates/registration/logged_out.html
+msgid "или"
+msgstr "же"
+
+#: catalog/templates/registration/logged_out.html
+msgid "на главную"
+msgstr "башкы бетке"

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Написать обзор" %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center my-5">
+    <div class="col-md-8 col-lg-7">
+
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'game_list' %}" class="text-decoration-none">{% trans "Каталог" %}</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'game_detail' game.slug %}" class="text-decoration-none">{{ game.title }}</a></li>
+                <li class="breadcrumb-item active">{% trans "Новый обзор" %}</li>
+            </ol>
+        </nav>
+
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-header bg-success text-white py-3 rounded-top-4">
+                <h3 class="mb-0 fw-bold">{% trans "Написать обзор на" %} "{{ game.title }}"</h3>
+            </div>
+            <div class="card-body p-4 p-md-5">
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-secondary">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.errors %}
+                                <div class="text-danger small mt-1 fw-bold">{{ field.errors|striptags }}</div>
+                            {% endif %}
+                            {% if field.help_text %}
+                                <div class="form-text small">{{ field.help_text|safe }}</div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+
+                    <div class="d-flex justify-content-between align-items-center mt-5">
+                        <a href="{% url 'game_detail' game.slug %}" class="btn btn-outline-secondary px-4 rounded-pill">{% trans "Отмена" %}</a>
+                        <button type="submit" class="btn btn-success btn-lg px-5 rounded-pill shadow fw-bold">{% trans "Отправить обзор" %}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <p class="text-center text-muted mt-3 small">{% trans "Обзор появится на сайте только после проверки модератором." %}</p>
+    </div>
+</div>
+{% endblock %}

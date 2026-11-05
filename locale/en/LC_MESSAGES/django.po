@@ -1,0 +1,329 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 15:00+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: catalog/forms.py
+msgid "Текст комментария"
+msgstr "Comment text"
+
+#: catalog/forms.py
+msgid "Ваш вопрос или комментарий к игре..."
+msgstr "Your question or comment about the game..."
+
+#: catalog/forms.py
+msgid "Тема"
+msgstr "Subject"
+
+#: catalog/forms.py
+msgid "Сообщение"
+msgstr "Message"
+
+#: catalog/forms.py
+msgid "Тема комментария"
+msgstr "Comment subject"
+
+#: catalog/forms.py
+msgid "Текст не может быть пустым."
+msgstr "Text cannot be empty."
+
+#: catalog/forms.py
+msgid "Текст не должен превышать 1000 символов."
+msgstr "Text must not exceed 1000 characters."
+
+#: catalog/forms.py
+msgid "Тема не может быть пустой."
+msgstr "Subject cannot be empty."
+
+#: catalog/forms.py
+msgid "Тема не должна превышать 150 символов."
+msgstr "Subject must not exceed 150 characters."
+
+#: catalog/forms.py
+msgid "Текст комментария не может быть пустым."
+msgstr "Comment text cannot be empty."
+
+#: catalog/forms.py
+msgid "Пользователь с таким именем уже существует."
+msgstr "A user with this username already exists."
+
+#: catalog/forms.py
+msgid "Email"
+msgstr "Email"
+
+#: catalog/forms.py
+msgid "Обзор должен содержать хотя бы 50 символов."
+msgstr "The review must contain at least 50 characters."
+
+#: catalog/templates/about.html
+msgid "О проекте"
+msgstr "About"
+
+#: catalog/templates/about.html
+msgid "BoardGamesHub - это проект, созданный для того, чтобы помочь находить, обсуждать и делиться впечатлениями о настольных играх."
+msgstr "BoardGamesHub is a project designed to help find, discuss and share impressions of board games."
+
+#: catalog/templates/about.html
+msgid "Каталог"
+msgstr "Catalog"
+
+#: catalog/templates/about.html
+msgid "Удобный список всех игр с обложками и характеристиками."
+msgstr "A convenient list of all games with covers and characteristics."
+
+#: catalog/templates/about.html
+msgid "Обзоры"
+msgstr "Reviews"
+
+#: catalog/templates/about.html
+msgid "Пользователи пишут обзоры и ставят оценки играм."
+msgstr "Users write reviews and rate games."
+
+#: catalog/templates/about.html
+msgid "Комментарии"
+msgstr "Comments"
+
+#: catalog/templates/about.html
+msgid "Обсуждайте игры и обзоры с другими участниками."
+msgstr "Discuss games and reviews with other participants."
+
+#: catalog/templates/about.html
+msgid "Локализация"
+msgstr "Localization"
+
+#: catalog/templates/about.html
+msgid "Сайт доступен на трех языках."
+msgstr "The site is available in three languages."
+
+#: catalog/templates/about.html
+msgid "Технологии проекта"
+msgstr "Project Technologies"
+
+#: catalog/templates/about.html
+msgid "Перейти в каталог"
+msgstr "Go to catalog"
+
+#: catalog/templates/base.html
+msgid "Меню"
+msgstr "Menu"
+
+#: catalog/templates/base.html
+msgid "Каталог игр"
+msgstr "Games Catalog"
+
+#: catalog/templates/base.html
+msgid "Админка"
+msgstr "Admin"
+
+#: catalog/templates/base.html
+msgid "Привет"
+msgstr "Hello"
+
+#: catalog/templates/base.html
+msgid "Выйти"
+msgstr "Log out"
+
+#: catalog/templates/base.html
+msgid "Войти"
+msgstr "Log in"
+
+#: catalog/templates/base.html
+msgid "Регистрация"
+msgstr "Register"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Каталог настольных игр"
+msgstr "Board Games Catalog"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Нет обложки"
+msgstr "No cover"
+
+#: catalog/templates/catalog/game_list.html
+msgid "игроков"
+msgstr "players"
+
+#: catalog/templates/catalog/game_list.html
+msgid "мин"
+msgstr "min"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Подробнее"
+msgstr "Read more"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Пока нет ни одной игры. Добавь их через"
+msgstr "No games yet. Add them via"
+
+#: catalog/templates/catalog/game_list.html
+msgid "админку"
+msgstr "admin panel"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Страница"
+msgstr "Page"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Назад"
+msgstr "Back"
+
+#: catalog/templates/catalog/game_list.html
+msgid "Вперёд"
+msgstr "Next"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Год"
+msgstr "Year"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Игроки"
+msgstr "Players"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Время"
+msgstr "Time"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Сложность"
+msgstr "Difficulty"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Издатель"
+msgstr "Publisher"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Описание"
+msgstr "Description"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Обзоров пока нет. Станьте первым, кто напишет обзор!"
+msgstr "No reviews yet. Be the first to write one!"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Написать обзор"
+msgstr "Write a review"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Войдите, чтобы написать обзор"
+msgstr "Log in to write a review"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Обсуждение игры"
+msgstr "Game Discussion"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Пока нет комментариев к игре. Будь первым!"
+msgstr "No comments on the game yet. Be the first!"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Оставить комментарий"
+msgstr "Leave a comment"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Отправить"
+msgstr "Submit"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Войдите"
+msgstr "Log in"
+
+#: catalog/templates/catalog/game_detail.html
+msgid "чтобы оставить комментарий."
+msgstr "to leave a comment."
+
+#: catalog/templates/catalog/game_detail.html
+msgid "Назад к каталогу"
+msgstr "Back to catalog"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Обзор"
+msgstr "Review"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Снять с публикации"
+msgstr "Unpublish"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Пока нет опубликованных комментариев. Будьте первым!"
+msgstr "No published comments yet. Be the first!"
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Комментарий появится после модерации."
+msgstr "The comment will appear after moderation."
+
+#: catalog/templates/catalog/review_detail.html
+msgid "Вернуться к игре"
+msgstr "Back to game"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Новый обзор"
+msgstr "New review"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Написать обзор на"
+msgstr "Write a review for"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Отмена"
+msgstr "Cancel"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Отправить обзор"
+msgstr "Submit review"
+
+#: catalog/templates/catalog/review_form.html
+msgid "Обзор появится на сайте только после проверки модератором."
+msgstr "The review will appear on the site only after moderator approval."
+
+#: catalog/templates/registration/login.html
+msgid "Вход"
+msgstr "Sign in"
+
+#: catalog/templates/registration/login.html
+msgid "Неверное имя пользователя или пароль."
+msgstr "Invalid username or password."
+
+#: catalog/templates/registration/login.html
+msgid "Нет аккаунта?"
+msgstr "Do not have an account?"
+
+#: catalog/templates/registration/login.html
+msgid "Зарегистрироваться"
+msgstr "Sign up"
+
+#: catalog/templates/registration/login.html
+msgid "На главную"
+msgstr "Home"
+
+#: catalog/templates/registration/register.html
+msgid "Уже есть аккаунт?"
+msgstr "Already have an account?"
+
+#: catalog/templates/registration/logged_out.html
+msgid "Выход"
+msgstr "Log out"
+
+#: catalog/templates/registration/logged_out.html
+msgid "Вы вышли"
+msgstr "You have logged out"
+
+#: catalog/templates/registration/logged_out.html
+msgid "Войти снова"
+msgstr "Log in again"
+
+#: catalog/templates/registration/logged_out.html
+msgid "или"
+msgstr "or"
+
+#: catalog/templates/registration/logged_out.html
+msgid "на главную"
+msgstr "to home"

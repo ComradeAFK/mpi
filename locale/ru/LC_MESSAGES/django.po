@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-30 11:53+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\catalog\forms.py:30 .\catalog\forms.py:55
+msgid "Текст комментария"
+msgstr ""
+
+#: .\catalog\forms.py:33
+msgid "Ваш вопрос или комментарий к игре..."
+msgstr ""
+
+#: .\catalog\forms.py:39
+msgid "Текст не может быть пустым."
+msgstr ""
+
+#: .\catalog\forms.py:41 .\catalog\forms.py:71
+msgid "Текст не должен превышать 1000 символов."
+msgstr ""
+
+#: .\catalog\forms.py:50 .\catalog\templates\catalog\review_detail.html:85
+msgid "Тема"
+msgstr ""
+
+#: .\catalog\forms.py:51 .\catalog\templates\catalog\review_detail.html:93
+msgid "Сообщение"
+msgstr ""
+
+#: .\catalog\forms.py:54
+msgid "Тема комментария"
+msgstr ""
+
+#: .\catalog\forms.py:61
+msgid "Тема не может быть пустой."
+msgstr ""
+
+#: .\catalog\forms.py:63
+msgid "Тема не должна превышать 150 символов."
+msgstr ""
+
+#: .\catalog\forms.py:69
+msgid "Текст комментария не может быть пустым."
+msgstr ""
+
+#: .\catalog\forms.py:76
+msgid "Email"
+msgstr ""
+
+#: .\catalog\forms.py:85
+msgid "Пользователь с таким именем уже существует."
+msgstr ""
+
+#: .\catalog\templates\about.html:4 .\catalog\templates\base.html:37
+msgid "О проекте"
+msgstr ""
+
+#: .\catalog\templates\about.html:18
+msgid ""
+"BoardGamesHub - это проект, созданный для того, чтобы помочь находить, "
+"обсуждать и делиться впечатлениями о настольных играх."
+msgstr ""
+
+#: .\catalog\templates\about.html:27
+#: .\catalog\templates\catalog\game_detail.html:9
+#: .\catalog\templates\catalog\review_detail.html:9
+#: .\catalog\templates\catalog\review_form.html:12
+msgid "Каталог"
+msgstr ""
+
+#: .\catalog\templates\about.html:28
+msgid "Удобный список всех игр с обложками и характеристиками."
+msgstr ""
+
+#: .\catalog\templates\about.html:34
+#: .\catalog\templates\catalog\game_detail.html:74
+msgid "Обзоры"
+msgstr ""
+
+#: .\catalog\templates\about.html:35
+msgid "Пользователи пишут обзоры и ставят оценки играм."
+msgstr ""
+
+#: .\catalog\templates\about.html:41
+#: .\catalog\templates\catalog\review_detail.html:41
+msgid "Комментарии"
+msgstr ""
+
+#: .\catalog\templates\about.html:42
+msgid "Обсуждайте игры и обзоры с другими участниками."
+msgstr ""
+
+#: .\catalog\templates\about.html:48
+msgid "Локализация"
+msgstr ""
+
+#: .\catalog\templates\about.html:49
+msgid "Сайт доступен на трех языках."
+msgstr ""
+
+#: .\catalog\templates\about.html:56
+msgid "Технологии проекта"
+msgstr ""
+
+#: .\catalog\templates\about.html:68
+msgid "Перейти в каталог"
+msgstr ""
+
+#: .\catalog\templates\base.html:27
+msgid "Меню"
+msgstr ""
+
+#: .\catalog\templates\base.html:32
+#: .\catalog\templates\catalog\game_list.html:4
+msgid "Каталог игр"
+msgstr ""
+
+#: .\catalog\templates\base.html:43
+msgid "Админка"
+msgstr ""
+
+#: .\catalog\templates\base.html:75
+msgid "Непроверенные комментарии"
+msgstr ""
+
+#: .\catalog\templates\base.html:76
+msgid "Модерация"
+msgstr ""
+
+#: .\catalog\templates\base.html:86
+msgid "Привет"
+msgstr ""
+
+#: .\catalog\templates\base.html:92
+msgid "Выйти"
+msgstr ""
+
+#: .\catalog\templates\base.html:97
+#: .\catalog\templates\registration\login.html:29
+#: .\catalog\templates\registration\register.html:62
+msgid "Войти"
+msgstr ""
+
+#: .\catalog\templates\base.html:100
+#: .\catalog\templates\registration\register.html:4
+#: .\catalog\templates\registration\register.html:11
+msgid "Регистрация"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:21
+#: .\catalog\templates\catalog\game_list.html:30
+msgid "Нет обложки"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:41
+msgid "Год"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:46
+msgid "Игроки"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:50
+msgid "Время"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:51
+#: .\catalog\templates\catalog\game_list.html:50
+msgid "мин"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:54
+msgid "Сложность"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:62
+msgid "Издатель"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:65
+msgid "Описание"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:77
+#: .\catalog\templates\catalog\review_form.html:4
+msgid "Написать обзор"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:81
+msgid "Войдите, чтобы написать обзор"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:102
+msgid "Обзоров пока нет. Станьте первым, кто напишет обзор!"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:105
+msgid "Обсуждение игры"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:129
+msgid "Пока нет комментариев к игре. Будь первым!"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:134
+#: .\catalog\templates\catalog\review_detail.html:79
+msgid "Оставить комментарий"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:144
+#: .\catalog\templates\catalog\review_detail.html:99
+msgid "Отправить"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:148
+#: .\catalog\templates\catalog\review_detail.html:104
+msgid "Войдите"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:148
+#: .\catalog\templates\catalog\review_detail.html:104
+msgid "чтобы оставить комментарий."
+msgstr ""
+
+#: .\catalog\templates\catalog\game_detail.html:156
+msgid "Назад к каталогу"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:10
+msgid "Каталог настольных игр"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:50
+msgid "игроков"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:67
+msgid "Подробнее"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:76
+msgid "Пока нет ни одной игры. Добавь их через"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:76
+msgid "админку"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:87
+msgid "Назад"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:91
+msgid "Страница"
+msgstr ""
+
+#: .\catalog\templates\catalog\game_list.html:95
+msgid "Вперёд"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_detail.html:11
+msgid "Обзор"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_detail.html:64
+msgid "Снять с публикации"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_detail.html:74
+msgid "Пока нет опубликованных комментариев. Будьте первым!"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_detail.html:100
+msgid "Комментарий появится после модерации."
+msgstr ""
+
+#: .\catalog\templates\catalog\review_detail.html:111
+msgid "Вернуться к игре"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_form.html:14
+msgid "Новый обзор"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_form.html:20
+msgid "Написать обзор на"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_form.html:39
+msgid "Отмена"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_form.html:40
+msgid "Отправить обзор"
+msgstr ""
+
+#: .\catalog\templates\catalog\review_form.html:46
+msgid "Обзор появится на сайте только после проверки модератором."
+msgstr ""
+
+#: .\catalog\templates\registration\logged_out.html:4
+msgid "Выход"
+msgstr ""
+
+#: .\catalog\templates\registration\logged_out.html:8
+msgid "Вы вышли"
+msgstr ""
+
+#: .\catalog\templates\registration\logged_out.html:10
+msgid "Войти снова"
+msgstr ""
+
+#: .\catalog\templates\registration\logged_out.html:10
+msgid "или"
+msgstr ""
+
+#: .\catalog\templates\registration\logged_out.html:11
+msgid "на главную"
+msgstr ""
+
+#: .\catalog\templates\registration\login.html:4
+#: .\catalog\templates\registration\login.html:11
+msgid "Вход"
+msgstr ""
+
+#: .\catalog\templates\registration\login.html:15
+msgid "Неверное имя пользователя или пароль."
+msgstr ""
+
+#: .\catalog\templates\registration\login.html:34
+msgid "Нет аккаунта?"
+msgstr ""
+
+#: .\catalog\templates\registration\login.html:34
+#: .\catalog\templates\registration\register.html:55
+msgid "Зарегистрироваться"
+msgstr ""
+
+#: .\catalog\templates\registration\login.html:35
+msgid "На главную"
+msgstr ""
+
+#: .\catalog\templates\registration\register.html:61
+msgid "Уже есть аккаунт?"
+msgstr ""
+
+#: .\config\settings.py:93
+msgid "Русский"
+msgstr ""
+
+#: .\config\settings.py:94
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:95
+msgid "Кыргызча"
+msgstr ""
